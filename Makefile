@@ -6,7 +6,7 @@
 #    By: jcasian <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/08/07 10:43:09 by jcasian           #+#    #+#              #
-#    Updated: 2018/08/07 16:20:12 by jcasian          ###   ########.fr        #
+#    Updated: 2018/08/10 15:48:44 by jcasian          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,8 @@ INCLUDES = includes
 SRCSDIR = srcs
 
 SRCS = $(addprefix $(SRCSDIR)/,\
-	   main.c get_player_info.c struct_handle.c)
+		main.c structure_handle.c get_player.c free_functions.c \
+		get_map_size.c)
 
 LIBFTSRCS = $(addprefix $(LIBFTDIR)/,\
 			checks_after_percentage.c ft_atoi.c ft_bzero.c ft_count_words.c \
@@ -45,7 +46,7 @@ LIBFTSRCS = $(addprefix $(LIBFTDIR)/,\
 			get_next_line.c is_tests.c prepare_address.c prepare_binary.c \
 			prepare_char.c prepare_hexadecimal.c prepare_octal.c \
 			prepare_percentage.c prepare_signed.c prepare_str.c prepare_undecimal.c \
-			print_error.c struct_handle.c ft_numcharapp.c)
+			print_error.c struct_handle.c ft_countcharsrepetition.c)
 
 LIBFTOBJECTS = $(patsubst %.c, %.o, $(LIBFTSRCS))
 
