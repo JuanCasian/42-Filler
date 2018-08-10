@@ -6,7 +6,7 @@
 /*   By: jcasian <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/10 12:49:22 by jcasian           #+#    #+#             */
-/*   Updated: 2018/07/23 14:27:36 by jcasian          ###   ########.fr       */
+/*   Updated: 2018/08/10 13:54:01 by jcasian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -171,6 +171,6 @@ void				prepare_octal(t_info *info);
 void				prepare_binary(t_info *info);
 void				prepare_signed(t_info *info);
 void				prepare_char(t_info *info);
-int					ft_numcharapp(char *str, char c);
+int					ft_countcharsrepetition(char *str, char c);
 
 #endif
