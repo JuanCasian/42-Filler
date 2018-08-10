@@ -14,5 +14,16 @@
 # define FILLER_H
 
 # include "libft.h"
+# include <stdio.h>
+
+typedef struct  s_filler
+{
+	char	**parsed;
+	char	mychar;
+	char	enemychar;
+}				t_filler;
+
+t_filler	*init_struct(void);
+void get_player_info(t_filler *f);
 
 #endif

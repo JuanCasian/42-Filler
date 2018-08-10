@@ -14,6 +14,9 @@
 
 int		main(void)
 {
-	ft_printf("HEllo");
+	t_filler	*f;
+
+	f = init_struct();
+	get_player_info(f);
 	return (0);
 }

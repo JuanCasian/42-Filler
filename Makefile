@@ -22,7 +22,7 @@ INCLUDES = includes
 SRCSDIR = srcs
 
 SRCS = $(addprefix $(SRCSDIR)/,\
-	   main.c)
+	   main.c get_player_info.c struct_handle.c)
 
 LIBFTSRCS = $(addprefix $(LIBFTDIR)/,\
 			checks_after_percentage.c ft_atoi.c ft_bzero.c ft_count_words.c \
@@ -45,7 +45,7 @@ LIBFTSRCS = $(addprefix $(LIBFTDIR)/,\
 			get_next_line.c is_tests.c prepare_address.c prepare_binary.c \
 			prepare_char.c prepare_hexadecimal.c prepare_octal.c \
 			prepare_percentage.c prepare_signed.c prepare_str.c prepare_undecimal.c \
-			print_error.c struct_handle.c)
+			print_error.c struct_handle.c ft_numcharapp.c)
 
 LIBFTOBJECTS = $(patsubst %.c, %.o, $(LIBFTSRCS))
 
@@ -60,10 +60,10 @@ $(LIBFTOBJECTS): %.o: %.c
 $(OBJECTS): %.o: %.c
 	@echo "${YELLOW}Preparing program... Please wait${NC}"
 	@gcc -Wall -Werror -Wextra -I$(INCLUDES) -c $< -o $@
-	@echo "${GREEN}Program:" $(NAME) "is ready!${NC}"
 
 $(NAME): $(OBJECTS)
 	@gcc -Wall -Werror -Wextra -I$(INCLUDES) -L$(LIBSDIR) -lft $(OBJECTS) -o $(NAME)
+	@echo "${GREEN}Program:" $(NAME) "is ready!${NC}"
 
 clean:
 	@echo "${YELLOW}Cleanning objects...${NC}"
@@ -94,3 +94,8 @@ libfclean: libclean
 
 relib: fclean lib
 
+debug:
+	gcc -g -Wall -Werror -Wextra $(SRCS) $(LIBFTSRCS) -I$(INCLUDES) -o debug
+
+debugclean:
+	rm -rf debug*
