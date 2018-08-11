@@ -18,7 +18,7 @@ int		main(void)
 
 	if (!(f = initiate_structure()))
 		return (-1);
-	f->fd = open("/nfs/2018/j/jcasian/42-Program/Filler/hello.txt", O_RDWR);
+	f->fd = open("//Users/juancasian/42-Program/Filler/hello.txt", O_RDWR);
 	if (get_player(f) == -1)
 		return (-1);
 	if (1)
@@ -32,6 +32,7 @@ int		main(void)
 		fill_heatmap(f);
 		if (get_piece(f) == -1)
 			return (-1);
+		find_nextpos(f);
 		int	j;
 		int	k;
 
