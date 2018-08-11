@@ -6,7 +6,7 @@
 /*   By: jcasian <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 13:31:15 by jcasian           #+#    #+#             */
-/*   Updated: 2018/08/10 18:31:35 by jcasian          ###   ########.fr       */
+/*   Updated: 2018/08/10 19:55:35 by jcasian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_filler	*initiate_structure(void)
 	t_filler	*f;
 	
 	if (!(f = (t_filler*)malloc(sizeof(t_filler))))
-		print_error();
+		return (NULL);
 	f->line = NULL;
 	f->parsed = NULL;
 	f->mychar = '\0';

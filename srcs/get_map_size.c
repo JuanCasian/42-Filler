@@ -6,7 +6,7 @@
 /*   By: jcasian <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 15:16:33 by jcasian           #+#    #+#             */
-/*   Updated: 2018/08/10 15:50:24 by jcasian          ###   ########.fr       */
+/*   Updated: 2018/08/10 19:45:16 by jcasian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static int	get_map_info(t_filler *f)
 {
 	int	gres;
 
-	if ((gres = get_next_line(f->fd, &f->line)) < 0)
+	if ((gres = get_next_line(f->fd, &f->line)) < 0 || !f->line)
 		return (-1);
 	if (ft_countcharsrepetition(f->line, ' ') != 2)
 	{

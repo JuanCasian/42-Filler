@@ -6,7 +6,7 @@
 /*   By: jcasian <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 13:29:56 by jcasian           #+#    #+#             */
-/*   Updated: 2018/08/10 18:51:28 by jcasian          ###   ########.fr       */
+/*   Updated: 2018/08/10 20:06:46 by jcasian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int		main(void)
 			return (-1);
 		if (create_heatmap(f) == -1)
 			return (-1);
+		fill_heatmap(f);
 		int	j;
 		int	k;
 
@@ -37,7 +38,7 @@ int		main(void)
 		{
 			k = -1;
 			while (++k < f->w_map)
-				ft_printf("%i",f->heatmap[j][k]);
+				ft_printf("%3i", f->heatmap[j][k]);
 			ft_printf("\n");
 		}
 	}
