@@ -6,7 +6,7 @@
 /*   By: jcasian <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 13:31:15 by jcasian           #+#    #+#             */
-/*   Updated: 2018/08/10 16:28:01 by jcasian          ###   ########.fr       */
+/*   Updated: 2018/08/10 18:31:35 by jcasian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,6 @@ t_filler	*initiate_structure(void)
 	f->enemychar = '\0';
 	f->h_map = 0;
 	f->w_map = 0;
+	f->heatmap = NULL;
 	return (f);
 }

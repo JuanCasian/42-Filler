@@ -6,7 +6,7 @@
 /*   By: jcasian <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 14:08:17 by jcasian           #+#    #+#             */
-/*   Updated: 2018/08/10 16:55:57 by jcasian          ###   ########.fr       */
+/*   Updated: 2018/08/10 18:50:54 by jcasian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,15 @@ void	free_map(t_filler *f)
 		free(f->map[i++]);
 	free(f->map);
 	f->map = NULL;
+}
+
+void	free_heatmap(t_filler *f, int y)
+{
+	int	i;
+
+	i = -1;
+	while (++i < y)
+		free(f->heatmap[i]);
+	free(f->heatmap);
+	f->heatmap = NULL;
 }
