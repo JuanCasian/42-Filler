@@ -6,7 +6,7 @@
 /*   By: jcasian <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/07 10:40:36 by jcasian           #+#    #+#             */
-/*   Updated: 2018/08/10 19:30:42 by jcasian          ###   ########.fr       */
+/*   Updated: 2018/08/10 20:44:20 by jcasian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,9 @@ typedef struct  s_filler
 	int		fd;
 	char	**map;
 	int		**heatmap;
+	char	**piece;
+	int		w_piece;
+	int		h_piece;
 }				t_filler;
 
 t_filler		*initiate_structure(void);
@@ -40,5 +43,6 @@ void			free_map(t_filler *f);
 void			free_heatmap(t_filler *f, int y);
 int				create_heatmap(t_filler *f);
 void			fill_heatmap(t_filler *f);
+int				get_piece(t_filler *f);
 
 #endif

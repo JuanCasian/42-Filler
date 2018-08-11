@@ -6,7 +6,7 @@
 /*   By: jcasian <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 15:16:33 by jcasian           #+#    #+#             */
-/*   Updated: 2018/08/10 19:45:16 by jcasian          ###   ########.fr       */
+/*   Updated: 2018/08/10 20:27:21 by jcasian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,10 @@ int			get_map_size(t_filler *f)
 		return (-1);
 	free(f->line);
 	if (ft_strcmp(f->parsed[0], "Plateau") != 0)
+	{
+		free_parsed(f);
 		return (-1);
+	}
 	f->h_map = ft_atoi(f->parsed[1]);
 	f->w_map = ft_atoi(f->parsed[2]);
 	free_parsed(f);
