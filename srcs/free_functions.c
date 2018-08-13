@@ -6,7 +6,7 @@
 /*   By: jcasian <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 14:08:17 by jcasian           #+#    #+#             */
-/*   Updated: 2018/08/13 15:43:10 by jcasian          ###   ########.fr       */
+/*   Updated: 2018/08/13 16:33:32 by jcasian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,10 +59,11 @@ void	free_piece(t_filler *f)
 void	free_list(t_filler *f)
 {
 	t_piecelist	*tmp;
+
 	while (f->pieces->next)
 	{
 		tmp = f->pieces;
-		while(tmp->next->next)
+		while (tmp->next->next)
 			tmp = tmp->next;
 		free(tmp->next);
 		tmp->next = NULL;

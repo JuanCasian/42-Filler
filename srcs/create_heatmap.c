@@ -6,7 +6,7 @@
 /*   By: jcasian <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 18:28:38 by jcasian           #+#    #+#             */
-/*   Updated: 2018/08/10 19:56:06 by jcasian          ###   ########.fr       */
+/*   Updated: 2018/08/13 16:28:07 by jcasian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static void	initialize_heatmap(t_filler *f, int y)
 	}
 }
 
-int		create_heatmap(t_filler *f)
+int			create_heatmap(t_filler *f)
 {
 	int	y;
 

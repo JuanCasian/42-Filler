@@ -6,7 +6,7 @@
 /*   By: jcasian <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/07 10:40:36 by jcasian           #+#    #+#             */
-/*   Updated: 2018/08/13 15:42:55 by jcasian          ###   ########.fr       */
+/*   Updated: 2018/08/13 16:30:31 by jcasian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ typedef struct	s_piecelist
 {
 	int						x;
 	int						y;
-	struct	s_piecelist	*next;
+	struct s_piecelist		*next;
 }				t_piecelist;
 
-typedef struct  s_filler
+typedef struct	s_filler
 {
 	char		*line;
 	char		**parsed;
@@ -45,6 +45,7 @@ typedef struct  s_filler
 	int			finalx;
 	int			finaly;
 	int			bscore;
+	int			score;
 }				t_filler;
 
 t_filler		*initiate_structure(void);

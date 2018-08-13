@@ -6,13 +6,13 @@
 /*   By: jcasian <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 19:07:18 by jcasian           #+#    #+#             */
-/*   Updated: 2018/08/10 20:06:12 by jcasian          ###   ########.fr       */
+/*   Updated: 2018/08/13 16:34:39 by jcasian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
 
-static void	fill_withone(t_filler *f,int x, int y)
+static void	fill_withone(t_filler *f, int x, int y)
 {
 	if (x + 1 < f->w_map && f->heatmap[y][x + 1] == ENEMY)
 		f->heatmap[y][x] = 1;
@@ -37,7 +37,7 @@ static void	fill_firstround(t_filler *f)
 {
 	int	x;
 	int	y;
-	
+
 	y = -1;
 	while (++y < f->h_map)
 	{

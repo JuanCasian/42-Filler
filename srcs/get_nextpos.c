@@ -6,7 +6,7 @@
 /*   By: jcasian <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/13 14:34:13 by jcasian           #+#    #+#             */
-/*   Updated: 2018/08/13 15:14:42 by jcasian          ###   ########.fr       */
+/*   Updated: 2018/08/13 16:32:02 by jcasian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static void	get_realpiecepos(t_filler *f)
 	f->finaly = f->finaly - f->rely;
 }
 
-static void	check_piece(t_filler *f, int *score, int *valid, int y, int x)
+static void	check_piece(t_filler *f, int *valid, int y, int x)
 {
 	t_piecelist *tmp;
 	int			smallx;
@@ -35,23 +35,22 @@ static void	check_piece(t_filler *f, int *score, int *valid, int y, int x)
 			if (f->heatmap[smally][smallx] == ME)
 				(*valid)++;
 			else
-				(*score) += f->heatmap[smally][smallx];
+				f->score += f->heatmap[smally][smallx];
 		}
 		else
 		{
 			*valid = -1;
-			*score = -1;
+			f->score = -1;
 			return ;
 		}
 		tmp = tmp->next;
 	}
 }
 
-void	get_nextpos(t_filler *f)
+void		get_nextpos(t_filler *f)
 {
 	int j;
 	int k;
-	int score;
 	int	valid;
 	int	flag;
 
@@ -62,14 +61,15 @@ void	get_nextpos(t_filler *f)
 		k = -1;
 		while (f->map[j][++k])
 		{
-			score = 0;
+			f->score = 0;
 			valid = 0;
-			check_piece(f, &score, &valid, j, k);
-			if ((valid == 1 && score < f->bscore) || (valid == 1 && flag == 0))
+			check_piece(f, &valid, j, k);
+			if ((valid == 1 && f->score < f->bscore) ||
+					(valid == 1 && flag == 0))
 			{
 				f->finalx = k;
 				f->finaly = j;
-				f->bscore = score;
+				f->bscore = f->score;
 			}
 		}
 	}

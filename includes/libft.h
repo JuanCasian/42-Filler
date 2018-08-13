@@ -6,7 +6,7 @@
 /*   By: jcasian <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/10 12:49:22 by jcasian           #+#    #+#             */
-/*   Updated: 2018/08/10 13:54:01 by jcasian          ###   ########.fr       */
+/*   Updated: 2018/08/13 16:27:23 by jcasian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-typedef struct	s_info
+typedef struct		s_info
 {
 	int		flags[NFLAGS];
 	int		width;
@@ -44,9 +44,9 @@ typedef struct	s_info
 	int		count;
 	char	*res;
 	wchar_t	*wres;
-}				t_info;
+}					t_info;
 
-enum			e_flags
+enum				e_flags
 {
 	Fminus,
 	Fplus,
@@ -55,7 +55,7 @@ enum			e_flags
 	Fzero
 };
 
-enum			e_lengths
+enum				e_lengths
 {
 	Lhh,
 	Lh,

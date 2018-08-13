@@ -6,7 +6,7 @@
 /*   By: jcasian <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 16:03:09 by jcasian           #+#    #+#             */
-/*   Updated: 2018/08/10 19:46:49 by jcasian          ###   ########.fr       */
+/*   Updated: 2018/08/13 16:34:55 by jcasian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static int	verify_parsed(t_filler *f)
 {
 	int	flag;
-	
+
 	flag = 0;
 	if (ft_countcharsrepetition(f->line, ' ') != 1)
 		flag = 1;

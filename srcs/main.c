@@ -6,7 +6,7 @@
 /*   By: jcasian <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 13:29:56 by jcasian           #+#    #+#             */
-/*   Updated: 2018/08/13 15:44:57 by jcasian          ###   ########.fr       */
+/*   Updated: 2018/08/13 16:32:12 by jcasian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ int			main(void)
 
 	if (!(f = initiate_structure()))
 		return (-1);
-	//f->fd = open("/nfs/2018/j/jcasian/42-Program/Filler/hello.txt", O_RDWR);
-	f->fd = STDIN_FILENO;
+	f->fd = open("/nfs/2018/j/jcasian/42-Program/Filler/hello.txt", O_RDWR);
+	//f->fd = STDIN_FILENO;
 	if (get_player(f) == -1)
 		return (-1);
 	while (1)
