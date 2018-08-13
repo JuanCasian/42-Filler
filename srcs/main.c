@@ -6,7 +6,7 @@
 /*   By: jcasian <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 13:29:56 by jcasian           #+#    #+#             */
-/*   Updated: 2018/08/10 20:46:36 by jcasian          ###   ########.fr       */
+/*   Updated: 2018/08/12 21:22:17 by jcasian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int		main(void)
 
 	if (!(f = initiate_structure()))
 		return (-1);
-	f->fd = open("//Users/juancasian/42-Program/Filler/hello.txt", O_RDWR);
+	f->fd = open("/nfs/2018/j/jcasian/42-Program/Filler/hello.txt", O_RDWR);
 	if (get_player(f) == -1)
 		return (-1);
 	if (1)
@@ -31,6 +31,8 @@ int		main(void)
 			return (-1);
 		fill_heatmap(f);
 		if (get_piece(f) == -1)
+			return (-1);
+		if (create_pieceslist(f) == -1)
 			return (-1);
 		find_nextpos(f);
 		int	j;
