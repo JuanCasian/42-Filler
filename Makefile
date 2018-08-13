@@ -6,7 +6,7 @@
 #    By: jcasian <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/08/07 10:43:09 by jcasian           #+#    #+#              #
-#    Updated: 2018/08/12 21:13:32 by jcasian          ###   ########.fr        #
+#    Updated: 2018/08/13 14:33:38 by jcasian          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ SRCSDIR = srcs
 SRCS = $(addprefix $(SRCSDIR)/,\
 		main.c structure_handle.c get_player.c free_functions.c \
 		get_map_size.c create_map.c create_heatmap.c fill_heatmap.c \
-		get_piece.c create_pieceslist.c)
+		get_piece.c create_pieceslist.c get_nextpos.c)
 
 LIBFTSRCS = $(addprefix $(LIBFTDIR)/,\
 			checks_after_percentage.c ft_atoi.c ft_bzero.c ft_count_words.c \

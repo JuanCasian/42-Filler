@@ -6,7 +6,7 @@
 /*   By: jcasian <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/12 20:48:11 by jcasian           #+#    #+#             */
-/*   Updated: 2018/08/12 21:19:14 by jcasian          ###   ########.fr       */
+/*   Updated: 2018/08/13 15:18:40 by jcasian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ static int	add_newelem(int y, int x, t_filler *f)
 		return (-1);
 	elem->x = x;
 	elem->y = y;
+	elem->next = NULL;
 	tmp = f->pieces;
 	while (tmp->next)
 		tmp = tmp->next;
