@@ -4,6 +4,8 @@ Filler is another project inside the Algorithms and A.I. branch at 42 School Sil
 ## My Approach
 This project was diferent to all the previous algorithms projects I have made because in this one there is not only constants in the algortihm. In this activity your parameters are always changing: The map is being filled by the enemy, so you don't know the next move right away and also the pieces you are given are always diferent in size and shape. This is why the algorithm of this project should be able to handle the variables given and then place your given piece in the best way posible. The way I solved the puzzle was to create a heatmap of how the pieces are arranged, in this way the spaces near the enemy have a lower value which makes my auto-player able to calculate the best piece placement. My strategy for this game is to block the enemy first and then fill the rest of the board. To do so I followed the next steps:
 
+![Heatmap Example](res/heatmapexample.png)
+
 ##### 1. Get my player
 In this project we are given a virtual machine which will handle the players and the map, so the first step is to read the input from the virtual machine and parsed it into a readable format for my program. After that we pick the character that will represent my player based on the values given.
 
@@ -37,5 +39,7 @@ make
 ./filler_vm -f maps/map02 -p1 players/hcao.filler -p2 ../jcasian.filler
 ./filler_vm -f maps/map00 -p1 ../jcasian.filler -p2 players/hcao.filler
 ```
+After running the program the result is presented, O is por player 1 and X is for player 2:
+![Filler Results](res/example.png)
 ## Author
 Juan Pedro Casian - Github: [@JuanCasian](https://github.com/JuanCasian) - Email: juanpedrocasian@gmail.com
