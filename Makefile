@@ -6,7 +6,7 @@
 #    By: jcasian <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/08/07 10:43:09 by jcasian           #+#    #+#              #
-#    Updated: 2018/08/14 13:29:49 by jcasian          ###   ########.fr        #
+#    Updated: 2018/08/14 13:33:55 by jcasian          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NC = \033[0m
 GREEN = \033[0;32m
 YELLOW = \033[0;33m
 
-NAME = ./resources/players/jcasian.filler
+NAME = jcasian.filler
 LIBFTDIR = libft
 LIBSDIR = libs
 INCLUDES = includes
