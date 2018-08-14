@@ -6,19 +6,19 @@ This project was diferent to all the previous algorithms projects I have made be
 
 ![Heatmap Example](res/heatmapexample.png)
 
-##### 1. Get my player
+#### 1. Get my player
 In this project we are given a virtual machine which will handle the players and the map, so the first step is to read the input from the virtual machine and parsed it into a readable format for my program. After that we pick the character that will represent my player based on the values given.
 
-##### 2. Get map
+#### 2. Get map
 As I said before the variable can change in the game so that is why in this algorithm, it first reads the dimensions of the board and then fills a 2-Dimensional array with the pieces given.
 
-##### 3. Create the Heatmap
+#### 3. Create the Heatmap
 After the board is filled, it will create another 2D array, which will be filled with integers. THe filling of the heatmap starts by checking all the squares adjacent to the enemy and assigning it the value of 1. After that we fill the rest of the map with the next integer, until we meet the end of it.
 
-##### 4. Piece recognition
+#### 4. Piece recognition
 After creating the heatmap we read the piece and convert it into a 2D char array, but that is only temporary because I then convert it into a linked list of pieces of the piece by getting their coordinates in relation to the origin of the piece map. This is really helpful for the solving part.
 
-##### 5. Solving
+#### 5. Solving
 The algorith to solve is really simple, I go throughout the whole board and check position by position if the piece could be placed in that position and what would be the addition of the values of the parts of the piece in the heatmap. If the piece is in a valid position and the score is less than the previous one it means that the piece is closer to the enemy, therefore better placed for our strategy, so I save that coordinate and continue. Once all the board has been checked we simply print the best coordinate and wait for the map update. 
 
 ## Prerequesites
