@@ -6,7 +6,7 @@
 #    By: jcasian <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/08/07 10:43:09 by jcasian           #+#    #+#              #
-#    Updated: 2018/08/13 14:33:38 by jcasian          ###   ########.fr        #
+#    Updated: 2018/08/13 18:17:16 by jcasian          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,8 @@ LIBFTSRCS = $(addprefix $(LIBFTDIR)/,\
 			get_next_line.c is_tests.c prepare_address.c prepare_binary.c \
 			prepare_char.c prepare_hexadecimal.c prepare_octal.c \
 			prepare_percentage.c prepare_signed.c prepare_str.c prepare_undecimal.c \
-			print_error.c struct_handle.c ft_countcharsrepetition.c)
+			print_error.c struct_handle.c ft_countcharsrepetition.c \
+			get_next_line_stdin.c)
 
 LIBFTOBJECTS = $(patsubst %.c, %.o, $(LIBFTSRCS))
 

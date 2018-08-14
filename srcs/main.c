@@ -6,19 +6,11 @@
 /*   By: jcasian <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 13:29:56 by jcasian           #+#    #+#             */
-/*   Updated: 2018/08/13 16:32:12 by jcasian          ###   ########.fr       */
+/*   Updated: 2018/08/13 19:26:02 by jcasian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
-
-static void	free_all(t_filler *f)
-{
-	free_map(f);
-	free_heatmap(f, f->h_map);
-	free_piece(f);
-	free_list(f);
-}
 
 int			main(void)
 {
@@ -26,8 +18,7 @@ int			main(void)
 
 	if (!(f = initiate_structure()))
 		return (-1);
-	f->fd = open("/nfs/2018/j/jcasian/42-Program/Filler/hello.txt", O_RDWR);
-	//f->fd = STDIN_FILENO;
+	f->fd = STDIN_FILENO;
 	if (get_player(f) == -1)
 		return (-1);
 	while (1)
@@ -43,8 +34,8 @@ int			main(void)
 			return (-1);
 		if (create_pieceslist(f) == -1)
 			return (-1);
-		get_nextpos(f);
+		if (get_nextpos(f) == -1)
+			return (-1);
 		ft_printf("%i %i\n", f->finaly, f->finalx);
-		free_all(f);
 	}
 }

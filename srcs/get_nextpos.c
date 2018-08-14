@@ -6,7 +6,7 @@
 /*   By: jcasian <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/13 14:34:13 by jcasian           #+#    #+#             */
-/*   Updated: 2018/08/13 16:32:02 by jcasian          ###   ########.fr       */
+/*   Updated: 2018/08/13 19:49:03 by jcasian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,15 @@ static void	check_piece(t_filler *f, int *valid, int y, int x)
 	}
 }
 
-void		get_nextpos(t_filler *f)
+static int	set_all(t_filler *f, int j, int k)
+{
+	f->finalx = k;
+	f->finaly = j;
+	f->bscore = f->score;
+	return (1);
+}
+
+int			get_nextpos(t_filler *f)
 {
 	int j;
 	int k;
@@ -66,12 +74,11 @@ void		get_nextpos(t_filler *f)
 			check_piece(f, &valid, j, k);
 			if ((valid == 1 && f->score < f->bscore) ||
 					(valid == 1 && flag == 0))
-			{
-				f->finalx = k;
-				f->finaly = j;
-				f->bscore = f->score;
-			}
+				flag = set_all(f, j, k);
 		}
 	}
 	get_realpiecepos(f);
+	if (valid == -1 && f->score == -1 && f->bscore == -1)
+		return (-1);
+	return (0);
 }

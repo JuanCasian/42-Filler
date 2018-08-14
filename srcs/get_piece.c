@@ -6,7 +6,7 @@
 /*   By: jcasian <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 20:21:20 by jcasian           #+#    #+#             */
-/*   Updated: 2018/08/10 20:45:49 by jcasian          ###   ########.fr       */
+/*   Updated: 2018/08/13 18:20:29 by jcasian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static int	get_dimensions(t_filler *f)
 {
 	int	gres;
 
-	if ((gres = get_next_line(f->fd, &f->line)) < 0 || !f->line)
+	if ((gres = get_next_line_sin(f->fd, &f->line)) < 0 || !f->line)
 		return (-1);
 	if (ft_countcharsrepetition(f->line, ' ') != 2)
 	{
@@ -56,7 +56,7 @@ static int	get_pieceline(t_filler *f, int i)
 {
 	int gres;
 
-	if ((gres = get_next_line(f->fd, &f->line)) < 0 || !f->line)
+	if ((gres = get_next_line_sin(f->fd, &f->line)) < 0 || !f->line)
 		return (-1);
 	if (!(valid_pieceline(f->line)))
 	{

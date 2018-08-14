@@ -6,7 +6,7 @@
 /*   By: jcasian <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 16:03:09 by jcasian           #+#    #+#             */
-/*   Updated: 2018/08/13 16:34:55 by jcasian          ###   ########.fr       */
+/*   Updated: 2018/08/13 18:19:51 by jcasian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,12 @@ int			create_map(t_filler *f)
 	i = -1;
 	if (!(f->map = (char**)malloc(sizeof(char*) * f->h_map + 1)))
 		return (-1);
-	if ((gres = get_next_line(f->fd, &f->line) < 0) || !f->line)
+	if ((gres = get_next_line_sin(f->fd, &f->line) < 0) || !f->line)
 		return (-1);
 	while (++i < f->h_map)
 	{
 		free(f->line);
-		if ((gres = get_next_line(f->fd, &f->line)) < 0)
+		if ((gres = get_next_line_sin(f->fd, &f->line)) < 0)
 			return (-1);
 		if (verify_parsed(f) == -1)
 			return (-1);

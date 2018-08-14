@@ -6,7 +6,7 @@
 /*   By: jcasian <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/07 10:40:36 by jcasian           #+#    #+#             */
-/*   Updated: 2018/08/13 16:30:31 by jcasian          ###   ########.fr       */
+/*   Updated: 2018/08/13 18:54:20 by jcasian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int				create_heatmap(t_filler *f);
 void			fill_heatmap(t_filler *f);
 int				get_piece(t_filler *f);
 int				create_pieceslist(t_filler *f);
-void			get_nextpos(t_filler *f);
+int				get_nextpos(t_filler *f);
 void			free_list(t_filler *f);
 void			free_piece(t_filler *f);
 

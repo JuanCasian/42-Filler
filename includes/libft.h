@@ -6,7 +6,7 @@
 /*   By: jcasian <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/10 12:49:22 by jcasian           #+#    #+#             */
-/*   Updated: 2018/08/13 16:27:23 by jcasian          ###   ########.fr       */
+/*   Updated: 2018/08/13 18:16:34 by jcasian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 # define FT_LIBFT_H
 # define BUFF_SIZE 4096
+# define BUFF_SIZE_IN 1
 # define FDS 65535
 # define NFLAGS 5
 # define NLENS 6
@@ -172,5 +173,6 @@ void				prepare_binary(t_info *info);
 void				prepare_signed(t_info *info);
 void				prepare_char(t_info *info);
 int					ft_countcharsrepetition(char *str, char c);
+int					get_next_line_sin(const int fd, char **line);
 
 #endif
