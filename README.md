@@ -40,6 +40,7 @@ make
 ./filler_vm -f maps/map00 -p1 ../jcasian.filler -p2 players/hcao.filler
 ```
 After running the program the result is presented, O is por player 1 and X is for player 2:
+
 ![Filler Results](res/example.png)
 ## Author
 Juan Pedro Casian - Github: [@JuanCasian](https://github.com/JuanCasian) - Email: juanpedrocasian@gmail.com
